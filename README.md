@@ -17,7 +17,9 @@ Inside the src/config folder create a new file config.json and then add the foll
 
 ```
 
-Once you've added your db config as listed above, go to the src folder from your terminal and execute npx sequelize db:create
+Once you've added your db config as listed above, go to the src folder from your terminal and execute npx sequelize db:create and then execute `npx db:migrate`.
+
+
 
 ## DB Design
    -Airplane
