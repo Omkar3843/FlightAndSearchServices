@@ -1,13 +1,16 @@
-const { CityRepository } = require('../repository/index');
+const { CityRepoistory } = require('../repository/index');
+
+// const cityRepo = new CityRepoistory();
 
 class CityService {
+
     constructor () {
-        this.cityRepository = new CityRepository();
+        this.cityRepository =  new CityRepoistory(); 
     }
 
     async createCity(data) {
         try {
-            const city = await this.cityRepository.createCity(data);
+            const city = await cityRepository.createCity(data);
             return city;
         } catch (error) {
             console.log("Something went wrong at service layer");
@@ -17,7 +20,7 @@ class CityService {
 
     async deleteCity(cityId) {
         try {
-            const response = await this.cityRepository.deleteCity(cityId);
+            const response = await cityRepository.deleteCity(cityId);
             return response;
         } catch (error) {
             console.log("Something went wrong at service layer");
@@ -27,7 +30,7 @@ class CityService {
 
     async updateCity(cityId, data) {
         try {
-            const city = await this.cityRepository.updateCity(cityId, data);
+            const city = await cityRepository.updateCity(cityId, data);
             return city;
         } catch (error) {
             console.log("Something went wrong at service layer");
@@ -37,7 +40,7 @@ class CityService {
 
     async getCity(cityId) {
         try {
-            const city = await this.cityRepository.getCity(cityId);
+            const city = await cityRepository.getCity(cityId);
             return city;
         } catch (error) {
             console.log("Something went wrong at service layer");
@@ -45,12 +48,22 @@ class CityService {
         }
     }
 
+    // async getAllCities(filter) {
+    //     try {
+    //         const cities = await this.cityRepo.getAllCities({name: filter.name});
+    //         return cities;
+    //     } catch (error) {
+    //         console.log("Something went wrong at service layer");
+    //         throw {error};
+    //     }
+    // }
+
     async getAllCities(filter) {
         try {
-            const cities = await this.cityRepository.getAllCities({name: filter.name});
+            const cities = await cityRepository.getAllCities({name: filter.name});
             return cities;
         } catch (error) {
-            console.log("Something went wrong at service layer");
+            console.log("Something went wrong at service layer -> getallcities");
             throw {error};
         }
     }

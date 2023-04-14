@@ -1,17 +1,17 @@
 const express = require("express");
-const { City } = require('./models/index');
+// const { City } = require('./models/index');
 const bodyparser = require("body-parser");
 
 const { PORT } = require('./config/serverconfig');
 const ApiRoutes = require('./routes/index');
-const Cityrepoistory = require('./repository/city-repoistory');
+// const Cityrepoistory = require('./repository/city-repoistory');
 
 const setupStartServer = async () => {
 
     // create the express object
     const app = express();
-    // const PORT = 3000;
-
+    
+    // Middlewears
     app.use(bodyparser.json());
     app.use(bodyparser.urlencoded({extended: true}));
 
@@ -30,4 +30,4 @@ const setupStartServer = async () => {
     });
 }
 
-setupStartServer(); 
+setupStartServer();  

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx nodemon src/index"
   },
-  "author": "",
+  "author": "Omkar",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
