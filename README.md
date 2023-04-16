@@ -31,5 +31,20 @@ Once you've added your db config as listed above, go to the src folder from your
    -A city has many airport but one airport belongs to city
    -One airport can have many flights, but a flight belongs to one Airport
 
+
+   ##Tables
+
+   # City -> id,name,created_at,updated_at
+   # Airport -> id ,name,aderss, city-Id, created ,updated
+    Relationship -> city has many airport and airpportt belong to a city i.e. 
+    (one to many)
+
+  # for generating Airport models
+  
+  ```
+  -npx sequelize model:generate --name Airport --attributes 
+    name:String,address:String,cityId:integer
+  ```  
+
    
 
