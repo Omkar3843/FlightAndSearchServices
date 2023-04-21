@@ -33,9 +33,9 @@ const setupStartServer = async () => {
         // const airports = await Airport.findAll();
         // console.log(airports);
 
-        await Airplane.create({
-            modelNumber: 'Bombardire CRJ'
-        });
+        // await Airplane.create({
+        //     modelNumber: 'Bombardire CRJ'
+        // });
 
 
     });
