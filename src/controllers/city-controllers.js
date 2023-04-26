@@ -85,7 +85,7 @@ const update = async (req, res) => {
             err: error
         });
     }
-}
+}                        
 
 const getAll = async (req, res) => {
     try {
